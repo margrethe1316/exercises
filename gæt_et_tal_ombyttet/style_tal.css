@@ -1,0 +1,102 @@
+.hidden {
+  display: none;
+}
+
+body {
+  display: flex;
+  flex-direction: column; /* elementer i lodret rækkefølge */
+  justify-content: center; /* lodret centreret */
+  align-items: center; /* vandret centreret */
+  min-height: 100vh; /* fylder hele højden af skærmen */
+  margin: 0;
+  background-color: #ffbcde;
+}
+
+/* Baggrundscirkler */
+body::before,
+body::after,
+body .circle1,
+body .circle2,
+body .circle3 {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.15;
+  z-index: -1; /* ligger bag spillet */
+}
+
+/* Store cirkler via pseudo-elementer */
+body::before {
+  width: 400px;
+  height: 400px;
+  background-color: #4f46e5; /* lilla */
+  top: -100px;
+  left: -100px;
+}
+
+body::after {
+  width: 300px;
+  height: 300px;
+  background-color: #10b981; /* grøn */
+  bottom: -50px;
+  right: -50px;
+}
+
+/* Mindre cirkler med ekstra divs */
+.circle1 {
+  width: 150px;
+  height: 150px;
+  background-color: #f59e0b; /* orange */
+  top: 20%;
+  right: 10%;
+}
+
+.circle2 {
+  width: 100px;
+  height: 100px;
+  background-color: #3b82f6; /* blå */
+  bottom: 25%;
+  left: 15%;
+}
+
+.circle3 {
+  width: 200px;
+  height: 200px;
+  background-color: #ec4899; /* pink */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+h1 {
+  color: #c34f73;
+  font-family: "Luckiest Guy", cursive;
+}
+
+h2 {
+  color: #564146;
+  font-family: "Times New Roman", Times, serif;
+}
+
+p {
+  font-family: "Luckiest Guy", cursive;
+  color: #c34f73;
+}
+
+.gameBtn {
+  padding: 12px 24px;
+  font-size: 16px;
+  border-radius: 25px; /* Runde hjørner */
+  border: none;
+  cursor: pointer;
+  background-color: #c34f73;
+  color: white;
+  transition:
+    background-color 0.3s,
+    transform 0.1s;
+}
+
+.gameBtn:disabled {
+  background-color: #9ca3af;
+  cursor: not-allowed;
+}

@@ -41,6 +41,15 @@ function scissorsClick() {
   userChoice = "scissors";
   computerChooses();
 }
+// *************** Kunne have brugt ************ //
+// function btnClicked(evt){
+//   console.log(evt.target. classList.contains("rock"));
+//   if(evt.taget.classList.contains("paper"))
+//   else if (evt.target.classList.contains("scissors")):
+// }
+
+// Ville give beskeden true eller false i consolen //
+// *************** Kunne have brugt ************ //
 
 function computerChooses() {
   const randomNumber = Math.floor(Math.random() * 3);

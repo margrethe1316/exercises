@@ -1,4 +1,5 @@
-function myFunc(beloeb, moms) {
+"use strict";
+function myFunc(beloeb, moms = 25) {
   const momsBeloeb = beloeb * (moms / 100);
   console.log(beloeb + momsBeloeb);
 }
