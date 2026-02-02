@@ -1,0 +1,38 @@
+body {
+  display: flex;
+  flex-direction: column; /* elementer i lodret rækkefølge */
+  justify-content: center; /* lodret centreret */
+  align-items: center; /* vandret centreret */
+  min-height: 100vh; /* fylder hele højden af skærmen */
+  margin: 0;
+  background-color: #ffbcde;
+}
+h1 {
+  color: #c34f73;
+  font-family: "Luckiest Guy", cursive;
+}
+
+h2 {
+  color: #564146;
+  font-family: "Times New Roman", Times, serif;
+}
+
+label {
+  color: #564146;
+  font-family: "Times New Roman", Times, serif;
+  margin-top: 1rem;
+}
+
+.beregn {
+  padding: 12px 24px;
+  margin-top: 1rem;
+  font-size: 16px;
+  border-radius: 25px; /* Runde hjørner */
+  border: none;
+  cursor: pointer;
+  background-color: #c34f73;
+  color: white;
+  transition:
+    background-color 0.3s,
+    transform 0.1s;
+}

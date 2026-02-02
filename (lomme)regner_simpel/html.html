@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=, initial-scale=1.0" />
+    <title>Lommeregner simpel</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Luckiest+Guy&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <h1>Lommeregner</h1>
+    <h2>Indtast to tal og brug lommerregneren til at lave regnestykke!</h2>
+    <input id="tal1" class="tal1" type="number" />
+    <input id="tal2" class="tal2" type="number" />
+
+    <label for="operator">Vælg regneart:</label>
+
+    <select id="operator">
+      <option value="+">+</option>
+      <option value="-">-</option>
+      <option value="*">*</option>
+      <option value="/">/</option>
+    </select>
+
+    <button id="regnud" class="beregn">Beregn</button>
+    <h2 id="resultat"></h2>
+    <script src="js.js"></script>
+  </body>
+</html>
