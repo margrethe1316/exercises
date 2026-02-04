@@ -1,0 +1,24 @@
+nav ul {
+  list-style: none; /* Fjern punkter */
+  padding: 0;
+  display: flex; /* Gør listen vandret */
+}
+
+nav li {
+  margin-right: 8px;
+}
+
+/* Indsæt / mellem alle elementer undtagen det sidste */
+nav li:not(:last-child)::after {
+  content: " / ";
+  margin-left: 8px;
+}
+
+nav a {
+  text-decoration: none;
+  color: blue;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
