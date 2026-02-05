@@ -31,7 +31,7 @@ const tbodyPointer = document.querySelector("tbody");
 showTheseVehicles(vehicles);
 
 function showTheseVehicles(arr) {
-  tbodyPointer.innerHTML = ""; // ryd tabellen først
+  tbodyPointer.innerHTML = ""; // ryd tabellen først så filterets elementer ikke bliver lagt i forlængelse af de andre
 
   arr.forEach((each) => {
     // Håndter undefined eller tomme felter
@@ -45,7 +45,6 @@ function showTheseVehicles(arr) {
     const isTandem =
       each.isTandem === true ? "Ja" : each.isTandem === false ? "Nej" : "-";
 
-    // Brug de rensede værdier her
     tbodyPointer.innerHTML += `<tr>
       <td>${type}</td>
       <td>${fuel}</td>
@@ -71,7 +70,7 @@ function isElectric(vehicle) {
 }
 
 function moreThanTwoSeats(vehicle) {
-  if (vehicle.passengers < 2) {
+  if (vehicle.passengers > 2) {
     return true;
   } else {
     return false;
@@ -87,7 +86,7 @@ function electricOwnedByJonas(vehicle) {
 }
 
 function rugbrodMoreThanOne(vehicle) {
-  if (vehicle.Rugbrød === true && vehicle.passenders < 1) {
+  if (vehicle.fuel === "Rugbrød" && vehicle.passengers > 1) {
     return true;
   } else {
     return false;
@@ -114,3 +113,13 @@ document.querySelector("#electricJonasBtn").addEventListener("click", () => {
 document.querySelector("#rugbrodBtn").addEventListener("click", () => {
   showTheseVehicles(vehicles.filter(rugbrodMoreThanOne));
 });
+
+// Man kan også burge target til at lave knapper //
+
+function klik(evt) {
+  evt.target;
+  console.log("electricVeh", electricVeh);
+  if (evt.target.da) console.log("klik", evt.target.dataset.filter);
+
+  showTheseVehicles(vehicles.filter(isElectric));
+}
