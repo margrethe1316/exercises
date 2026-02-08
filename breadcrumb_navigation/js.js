@@ -11,8 +11,11 @@ const button = document.getElementById("generate");
 
 // Funktion der genererer breadcrumb //
 
+// Eventlistener på knappen //
+button.addEventListener("click", generateBreadcrumb);
+
 function generateBreadcrumb() {
-  breadcrumbContainer.innerHTML = "";
+  breadcrumbContainer.innerHTML = ""; // sørger for listen er tom, så man kan gøre det igen og igen
 
   bc.forEach((item, index) => {
     const li = document.createElement("li");
@@ -29,6 +32,3 @@ function generateBreadcrumb() {
     breadcrumbContainer.appendChild(li);
   });
 }
-
-// Eventlistener på knappen //
-button.addEventListener("click", generateBreadcrumb);
