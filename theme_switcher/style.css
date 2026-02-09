@@ -1,0 +1,61 @@
+[data-theme="dark"] {
+  --header-bg-col: grey;
+  --txt-col: white;
+  --main-bg-col: darkblue;
+  --footer-bg-col: lightgrey;
+}
+
+[data-theme="hawaii"] {
+  --header-bg-col: #00abd9;
+  --txt-col: darkblue;
+  --main-bg-col: yellow;
+  --footer-bg-col: red;
+}
+
+[data-theme="light"] {
+  --header-bg-col: beige;
+  --txt-col: #669b90;
+  --main-bg-col: #d3d4a8;
+  --footer-bg-col: #c6b794;
+}
+
+header {
+  background-color: var(--header-bg-col);
+  color: var(--txt-col);
+  font-family: "Luckiest Guy", cursive;
+  padding-top: 1rem;
+  font-size: 3rem;
+}
+
+main {
+  background-color: var(--main-bg-col);
+  color: var(--txt-col);
+  font-family: "Luckiest Guy", cursive;
+  padding-block: 4rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+footer {
+  background-color: var(--footer-bg-col);
+  font-family: "Luckiest Guy", cursive;
+  color: var(--txt-col);
+  padding-block: 2rem;
+}
+
+.header_grid {
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+  align-items: center;
+}
+
+select {
+  background-color: var(--footer-bg-col);
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  border-radius: 2rem;
+  font-family: "Luckiest Guy", cursive;
+  font-size: 1rem;
+}
